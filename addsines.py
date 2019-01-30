@@ -1,0 +1,23 @@
+import matplotlib.pyplot as plt
+import numpy as np
+f1=int(input("enter a frequency"))
+f2=int(input("enter a frequency"))
+fs=int(input("enter a sampling frequency" ))
+n=int(input("enter the samples"))
+x=np.arange(n)
+y1=np.sin(2 * np.pi * f1 * x/ fs)
+plt.subplot(311)
+plt.plot(x,y1)
+plt.xlabel('samples(n)')
+plt.ylabel('amplitude')
+y2=np.sin(2 * np.pi * f2 * x/ fs)
+plt.subplot(312)
+plt.plot(x,y2)
+plt.xlabel('samples(n)')
+plt.ylabel('amplitude')
+a=y1+y2
+plt.subplot(313)
+plt.plot(x,a)
+plt.xlabel('samples(n)')
+plt.ylabel('amplitude')
+plt.show()
